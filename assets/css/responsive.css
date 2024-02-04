@@ -6,8 +6,13 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .header {
+    padding: 18px 0;
+    margin-bottom: 0px;
+  }
   .al_show_result_items {
     grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
   }
   .logo_area {
     display: none;
@@ -20,6 +25,33 @@
   }
   .app_name {
     flex: 0 0 40%;
+  }
+  /* reversion  */
+  .al_main_setions {
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .al_preset_concept_area {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+  .al_show_for_mobile {
+    display: block;
+  }
+  .hide_in_mobile {
+    display: none;
+  }
+  .al_show_for_mobile {
+    padding: 30px 0;
+  }
+  .al_show_result_area {
+    padding: 0;
+  }
+  .al_preset_filter_wrapper {
+    margin-top: 20px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -35,15 +67,11 @@
     width: 100%;
     max-width: 100%;
   }
-  .al_preset_concept_area {
-    padding: 13px 0px;
-  }
+
   .match_precision .al_card {
     padding: 10px 15px;
   }
-  .al_show_result_area {
-    padding: 25px 0px;
-  }
+
   h1 {
     font-size: 18px;
     font-weight: 700;

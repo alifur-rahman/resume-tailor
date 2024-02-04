@@ -274,3 +274,12 @@ label {
 .al_card .al_p_title {
   margin-bottom: 3px;
 }
+
+/* for mobile two  */
+.al_main_setions {
+  display: flex;
+  flex-direction: column;
+}
+.al_show_for_mobile {
+  display: none;
+}
