@@ -51,12 +51,14 @@ footer {
 }
 button {
   cursor: pointer;
-  font-family: inherit;
 }
 
 /* Global css  */
 .container {
-  padding: 0 40px;
+  /* padding: 0 40px; */
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 h1 {
   font-size: 25px;
@@ -67,17 +69,17 @@ h1 {
 h6 {
   font-size: 16px;
   font-weight: 400;
-  color: #5b5b5b;
+  color: #000;
 }
 
 /* Header css  */
-.header {
+.header_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   padding: 20px 0;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .header_naves,
 .app_name,
@@ -94,6 +96,62 @@ h6 {
   align-content: center;
   gap: 11px;
 }
+.drop_down_item {
+  position: relative;
+}
+.drop_down_navs {
+  display: none;
+}
+.drop_down_navs ul {
+  background: #fcf1e6;
+  border-radius: 6px;
+  position: absolute;
+  width: 100%;
+  min-width: 280px;
+  right: 0;
+  top: 100%;
+  margin-top: 5px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+  padding-bottom: 15px;
+  transition: 0.4s;
+}
+.drop_down_navs li {
+  width: 100%;
+}
+.drop_down_navs li a {
+  display: block;
+  color: #333333;
+  font-size: 16px;
+  padding: 13px 20px;
+  transition: 0.3s;
+  border-radius: 6px;
+}
+.drop_down_navs li a:hover {
+  background: #f7e5d5;
+}
+.nav_with_icon {
+  display: flex !important;
+  gap: 5px;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav_with_icon img {
+  width: 20px;
+}
+.close_dropdown {
+  text-align: right;
+  padding: 10px 12px;
+}
+.close_dropdown button {
+  background: transparent;
+  border: none;
+}
 .user_avater {
   width: 40px;
   height: 40px;
@@ -104,48 +162,93 @@ h6 {
   font-size: 25px;
   color: #000;
 }
-.al_match_range {
+.match_range {
   flex: 0 0 50%;
+  overflow: hidden;
+  position: relative;
 }
 
-.al_card {
+.toptip_icon {
+  width: 24px;
+  height: 18px;
+  font-size: 18px;
+}
+.toptip_icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
   width: 100%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 5px #ccc;
 }
 
+.area_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 25px;
+  min-height: 443px;
+}
+
+.card_body {
+  position: relative;
+}
+
 .range {
   width: 100%;
-  height: 8px;
-  /* -webkit-appearance: none; */
-  /* background: #f2f2f2; */
-  /* outline: none; */
-  /* border-radius: 15px; */
-  /* overflow: hidden; */
-  /* box-shadow: inset 0 0 5px rgba(0, 0, 0, 1); */
-  padding: 10px;
-  margin-top: 10px;
-}
-/* .range::-webkit-slider-thumb {
+  height: 3px;
   -webkit-appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #0013ec;
+  background: #031aed20;
+  outline: none;
+  border-radius: 3px;
+  padding: 3px 0;
+  /* margin-top: 12px; */
   cursor: pointer;
-  border: 4px solid #333;
-  box-shadow: -407px 0 0 400px #0013ec;
-} */
+  position: relative;
+  z-index: 5;
+}
 
-.al_match_wrapper {
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e56f02;
+  cursor: pointer;
+  border: none;
+}
+
+.range_after_element {
+  background: #ff7a00;
+  width: 10px;
+  height: 5px;
+  border-radius: 6px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: 1;
+}
+
+.range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e56f02;
+  cursor: pointer;
+  border: none;
+}
+
+.match_flex_wrapper {
   display: flex;
   justify-content: space-between;
   align-content: center;
   align-items: center;
 }
 
-.al_filter_partes {
+.filter_partes {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,51 +259,54 @@ label {
   display: block;
   color: #2b2a2a;
   font-size: 14px;
+  margin-bottom: 12px;
 }
-.al_filter_right_part,
-.al_filter_left_part {
+.filter_right_part,
+.filter_left_part {
   flex: 0 0 50%;
 }
-.al_from_group {
+.from_group {
   width: 100%;
   max-width: 340px;
 }
-.al_preset_concept_area {
+.preset_concept_area {
   padding: 30px 0px;
 }
-.al_custom_select {
+.custom_select {
   width: 100%;
   height: 43px;
   padding: 10px;
-  background: #e6e9fe;
+  background: #e66f0229;
   border: none;
   border: 1px solid #a7a1a1;
   border-radius: 6px;
   color: gray;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 .text-right {
   text-align: right;
 }
-.al_button {
+.button {
   border: none;
   padding: 13px 0;
   width: 100%;
   border-radius: 6px;
   transition: 0.3s;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  letter-spacing: 1px;
   margin-top: 21px;
+  font-family: "Poppins", sans-serif;
 }
-.al_button_primary {
-  background: #031aed;
+.button_primary {
+  background: #e56f02;
   color: #fff;
 }
-.al_button_primary:hover {
-  background: #000;
+.button_primary:hover {
+  background: gray;
 }
 
-.al_filter_right_part {
+.filter_right_part {
   display: flex;
   justify-content: flex-end;
 }
@@ -208,34 +314,32 @@ label {
 .al_show_result_area {
   padding: 60px 0px;
 }
-.al_card_title {
+.card_title {
   font-size: 17px;
   padding-bottom: 18px;
   color: #333;
   font-weight: 500;
   margin-left: 15px;
 }
-.boder_gray {
+.border_gray {
   border: 2px solid #b6bffe;
-  /* box-shadow: 1px 2px 15px #00000053; */
 }
-.al_show_result_items {
+.border_primary {
+  border: 2px solid #e56f0247;
+}
+.input_cards_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 35px;
 }
-.al_show_result_items_single .al_card {
-  border-radius: 25px;
-  position: relative;
-}
 
-.al_card_footer {
+.card_footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0;
+  /* padding: 15px 0; */
 }
-.al_card_footer .btn {
+.card_footer .btn {
   height: 35px;
   width: 35px;
   border-radius: 50%;
@@ -246,14 +350,20 @@ label {
   background: rgb(205, 205, 205);
   color: gray;
   border: none;
+  transition: 0.3s;
+  cursor: pointer;
 }
-.al_card_right_arrow {
+.card_footer .btn:hover {
+  background: #e56f02;
+  color: #fff;
+}
+.card_right_arrow {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   column-gap: 25px;
 }
-.al_check_icon {
+.check_icon {
   height: 30px;
   width: 30px;
   border-radius: 4px;
@@ -263,23 +373,124 @@ label {
   align-items: center;
   color: #fff;
   position: absolute;
-  top: -15px;
-  right: -15px;
+  top: -35px;
+  right: -35px;
 }
-.al_card p {
+.card p {
   color: gray;
   font-size: 15px;
   margin-bottom: 12px;
 }
-.al_card .al_p_title {
+.card .al_p_title {
   margin-bottom: 3px;
 }
 
 /* for mobile two  */
-.al_main_setions {
+.main_setions {
   display: flex;
   flex-direction: column;
 }
-.al_show_for_mobile {
+.show_for_mobile {
   display: none;
+}
+.main_input_output_area {
+  position: relative;
+  margin-bottom: 30px;
+}
+.from_output_area {
+  position: absolute;
+  width: 100%;
+  max-width: 455px;
+  right: 0;
+  bottom: 0;
+}
+.card_textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  resize: none;
+  color: gray;
+  font-size: 15px;
+  margin-bottom: 12px;
+  font-family: "Poppins", sans-serif;
+  min-height: 310px;
+}
+.card_textarea:focus-visible {
+  border: none;
+  box-shadow: none !important;
+  outline: none;
+}
+
+.for_extra_small_screen {
+  display: none;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #f8b06d;
+  color: #333;
+  /* text-align: center; */
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 99;
+  top: -0%;
+  left: 100%;
+  font-size: 11px;
+  text-align: left;
+  transform: translateX(5px);
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #e56f0247 transparent transparent;
+}
+.toltip_flex {
+  display: flex;
+  gap: 5px;
+}
+.cloud_icons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  max-width: 25px;
+  max-height: 25px;
+}
+.cloud_icons img {
+  width: 100%;
+  height: 100%;
+}
+.bar_icons {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+.bar_icons img {
+  width: 100%;
+  height: 100%;
 }
