@@ -42,3 +42,30 @@ $(document).on('keyup', 'textarea', function () {
     }
 
 });
+
+$(document).ready(function() {
+    // Open modal when clicking the button
+    $(document).on("click", ".openModal", function() {
+      var targetModal = $(this).data("target-modal");
+      $("#" + targetModal).fadeIn();
+      $("#" + targetModal).addClass('show_modal');
+      $("body").css("overflow", "hidden");
+    });
+  
+    // Close modal when clicking the Ok button
+    $(document).on("click", ".closeModal", function() {
+      $(this).closest(".custom_modal").fadeOut();
+      $(this).closest(".custom_modal").removeClass('show_modal');
+      $("body").css("overflow", "auto");
+    });
+  
+    // Close modal when clicking outside the modal content
+    $(document).on("mouseup", function(e) {
+      var container = $(".modal_content");
+      if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $(".custom_modal").fadeOut();
+        $(".custom_modal").removeClass('show_modal');
+        $("body").css("overflow", "auto");
+      }
+    });
+  });;

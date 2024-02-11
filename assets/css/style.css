@@ -502,3 +502,89 @@ label {
 .fill_by_input.filled svg path {
   fill: rgb(2, 178, 2);
 }
+
+/* custom modal css  */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.custom_modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000054;
+  z-index: 99999999;
+  display: none;
+}
+.modal_wrapper {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.modal_wrapper.modal_small {
+  width: 100%;
+  max-width: 500px;
+}
+.modal_content {
+  background-color: #fff;
+  padding: 15px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.show_modal .modal_content {
+  animation: slideIn 0.3s ease forwards;
+  opacity: 1; /* Show the modal content */
+}
+.modal_content.slideIn {
+  animation: slideIn 0.3s ease forwards;
+}
+.modal_body {
+  text-align: center;
+}
+.modal_footer {
+  text-align: center;
+  padding-top: 22px;
+}
+.verification_modal p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.modal_icon {
+  margin-bottom: 10px;
+}
+
+.modal_button {
+  width: inherit;
+  padding: 5px 25px;
+  margin: 0;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  height: inherit;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.verification_modal .modal_card {
+  width: 100%;
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
