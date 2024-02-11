@@ -224,12 +224,14 @@ h6 {
 .range_after_element {
   background: #ff7a00;
   width: 10px;
-  height: 5px;
+  height: 6px;
   border-radius: 6px;
   position: absolute;
   left: 0;
   top: 50%;
   z-index: 1;
+  border: none;
+  box-shadow: none;
 }
 
 .range::-moz-range-thumb {
@@ -274,7 +276,7 @@ label {
 }
 .custom_select {
   width: 100%;
-  height: 43px;
+  height: 52px;
   padding: 10px;
   background: #e66f0229;
   border: none;
@@ -289,13 +291,13 @@ label {
 }
 .button {
   border: none;
-  padding: 13px 0;
+  padding: 14px 0;
   width: 100%;
   border-radius: 6px;
   transition: 0.3s;
   font-size: 16px;
   font-weight: 600;
-  margin-top: 21px;
+  margin-top: 33px;
   font-family: "Poppins", sans-serif;
 }
 .button_primary {
@@ -493,4 +495,10 @@ label {
 .bar_icons img {
   width: 100%;
   height: 100%;
+}
+
+/* icon css  */
+.fill_by_input.filled svg,
+.fill_by_input.filled svg path {
+  fill: rgb(2, 178, 2);
 }
