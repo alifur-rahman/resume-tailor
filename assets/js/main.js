@@ -79,9 +79,9 @@ $(document).ready(function() {
   
     if (passwordInput.type === "password") {
       passwordInput.type = "text";
-      toggleIcon.src = "assets/images/eye.svg";
+      toggleIcon.src = "assets/images/icons/eye.svg";
     } else {
       passwordInput.type = "password";
-      toggleIcon.src = "assets/images/eye-off.svg";
+      toggleIcon.src = "assets/images/icons/eye-off.svg";
     }
   }
