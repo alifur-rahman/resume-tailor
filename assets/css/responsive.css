@@ -126,7 +126,78 @@
     margin-bottom: 5px;
   }
   .container {
-    padding: 0 25px;
+    padding: 0 16px;
+  }
+  /* For Login and Signup Page */
+  .authContent {
+    display: flex;
+    flex-direction: column;
+  }
+  .auth__header {
+    order: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 20px;
+    padding: 5px 0;
+  }
+  .auth__status {
+    align-items: flex-start;
+  }
+  .authBottomHeader {
+    order: 3;
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 40px;
+    row-gap: 10px;
+  }
+  form {
+    order: 2;
+  }
+  .authWithOthers {
+    order: 4;
+    padding-top: 0px;
+  }
+  .authSocailLIst {
+    max-width: 200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .authSocailLIst li button {
+    border-radius: 50%;
+    width: 50px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .socailAuth small {
+    display: none;
+  }
+  .breakOr::after,
+  .breakOr::before {
+    position: absolute;
+    height: 1px;
+    width: 100px;
+    background: #b1b1b1;
+    content: "";
+    top: calc(50% - 0.5px);
+  }
+  .breakOr::after {
+    left: calc(50% - 130px);
+  }
+  .breakOr::before {
+    right: calc(50% - 130px);
+  }
+  .authContent {
+    padding: 35px 40px 35px;
+  }
+  .formSubmitBtn {
+    padding: 10px 40px;
+    font-size: 15px;
+  }
+  .authHidePass input {
+    font-size: 15px;
+  }
+  .formSubmit {
+    padding-top: 30px;
   }
 }
 
@@ -147,5 +218,30 @@
   }
   .for_extra_small_screen {
     display: block;
+  }
+  /* For Login and Signup Page */
+  .authBody {
+    background: #fff;
+    padding: 0px 0px;
+  }
+  .authForm {
+    padding: 0;
+  }
+  .authContent {
+    padding: 25px 0px 35px;
+    border-radius: 0px;
+  }
+  .formControl input {
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-radius: 0;
+    padding-left: 0;
+  }
+  .authSocailLIst {
+    padding-bottom: 20px;
+  }
+  .authHidePass label span {
+    display: none;
   }
 }
