@@ -69,3 +69,19 @@ $(document).ready(function() {
       }
     });
   });;
+
+
+
+  // For Toggle Passord Eye button
+  function togglePassword() {
+    const passwordInput = document.getElementById("passwordInput");
+    const toggleIcon = document.getElementById("toggleIcon");
+  
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleIcon.src = "assets/images/eye.svg";
+    } else {
+      passwordInput.type = "password";
+      toggleIcon.src = "assets/images/eye-off.svg";
+    }
+  }
