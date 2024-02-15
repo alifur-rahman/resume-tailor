@@ -6,6 +6,12 @@
   .from_output_area {
     max-width: 380px;
   }
+  .filter_right_part .from_group {
+    max-width: 380px;
+  }
+  .filter_left_part .from_group {
+    max-width: 367px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .container {
@@ -19,6 +25,12 @@
   .from_output_area {
     position: inherit;
     max-width: 100%;
+  }
+  .filter_right_part .from_group {
+    max-width: 465px;
+  }
+  .filter_left_part .from_group {
+    max-width: 467px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -73,7 +85,12 @@
     width: 100%;
     max-width: 100%;
   }
-
+  .filter_right_part .from_group {
+    max-width: 100%;
+  }
+  .filter_left_part .from_group {
+    max-width: 100%;
+  }
   .input_item_wrapper {
     display: flex;
     flex-direction: column-reverse;

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Tailoring | Resume Rizz</title>
+    <link rel="icon" type="image/png" href="assets/images/fav.png" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- st: header area  -->
+    <header>
+      <div class="container">
+        <div class="header_wrapper">
+          <!-- logo  -->
+          <div class="logo_area">
+            <a href="index.html">
+              <img
+                class="for_large_screen"
+                src="assets/images/logo.png"
+                alt="logo"
+              />
+              <img
+                class="for_extra_small_screen"
+                src="assets/images/fav.png"
+                alt="logo"
+              />
+            </a>
+          </div>
+
+          <!-- header navs  -->
+          <div class="header_naves">
+            <ul>
+              <li><p>Welcome, Stephen</p></li>
+              <li>
+                <img
+                  class="user_avater"
+                  src="https://smaabacus.com/themes/user/assets_old/img/dd/avatar/male.png"
+                  alt="user"
+                />
+              </li>
+              <li class="drop_down_item">
+                <a class="bar_icons" href="#">
+                  <img
+                    src="assets/images/icons/fontisto_nav-icon-list-a.svg"
+                    alt="bars"
+                  />
+                </a>
+                <div class="drop_down_navs">
+                  <ul>
+                    <li class="close_dropdown">
+                      <button class="close_dropdown_btn">
+                        <img
+                          src="assets/images/icons/iconoir_cancel.svg"
+                          alt="close"
+                        />
+                      </button>
+                    </li>
+                    <li>
+                      <a class="nav_with_icon" href="#">
+                        <img
+                          src="assets/images/icons/codicon_account.svg"
+                          alt=""
+                        />
+                        <p>Account</p></a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav_with_icon" href="#">
+                        <img
+                          src="assets/images/icons/teenyicons_password-outline.svg"
+                          alt=""
+                        />
+                        <p>Forgot/reset Password</p></a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav_with_icon" href="#">
+                        <img
+                          src="assets/images/icons/solar_card-outline.svg"
+                          alt=""
+                        />
+                        <p>Subscription</p></a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav_with_icon" href="#">
+                        <img
+                          src="assets/images/icons/carbon_logout.svg"
+                          alt=""
+                        />
+                        <p>Log Out</p></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end: header area  -->
+    <!-- st: main area  -->
+    <main>
+      <div class="container">
+        <div class="main_input_output_area">
+          <!-- from_input_area  -->
+          <div class="from_input_area">
+            <form action="#">
+              <div class="input_item_wrapper">
+                <div class="from_top_inputs">
+                  <!-- Match Precision range  -->
+                  <div class="match_precision_range_area">
+                    <div class="card">
+                      <div class="match_flex_wrapper">
+                        <div class="match_title toltip_flex">
+                          <h6>Match Precision</h6>
+                          <div class="tooltip">
+                            <div class="toptip_icon">
+                              <img
+                                src="assets/images/icons/uil_comment-info-alt.svg"
+                                alt=""
+                              />
+                            </div>
+                            <span class="tooltiptext">
+                              say about match precision
+                            </span>
+                          </div>
+                        </div>
+                        <div class="match_range">
+                          <input
+                            class="range"
+                            type="range"
+                            value="75"
+                            min="0"
+                            max="100"
+                            onChange="rangeSlide(this.value)"
+                            onmousemove="rangeSlide(this.value)"
+                          />
+                          <div
+                            class="range_after_element"
+                            id="afterElement"
+                            style="width: 75%"
+                          ></div>
+                        </div>
+                        <div class="match_value">
+                          <h6><span id="rangeValue">75</span>%</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- --  -->
+                  <!-- Preset Concept with Button -->
+                  <div class="preset_concept_area">
+                    <div class="filter_partes">
+                      <div class="filter_left_part">
+                        <div class="from_group">
+                          <div class="toltip_flex">
+                            <label for="preset">Preset Concept</label>
+                            <div class="tooltip">
+                              <div class="toptip_icon">
+                                <img
+                                  src="assets/images/icons/uil_comment-info-alt.svg"
+                                  alt=""
+                                />
+                              </div>
+                              <span class="tooltiptext">
+                                say about Preset Concept
+                              </span>
+                            </div>
+                          </div>
+
+                          <select
+                            class="custom_select"
+                            name="preset"
+                            id="preset"
+                          >
+                            <option value="cover letter">Cover Letter</option>
+                            <option value="resume">Resume</option>
+                            <option value="cv">CV</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="filter_right_part">
+                        <div class="from_group text-right">
+                          <button class="button button_primary">
+                            Generate Tailored Resume
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- --  -->
+                </div>
+                <!-- Job Description & Your Current Resume input boxes with output -->
+                <div class="job_desc_current_inputs_area">
+                  <div class="input_cards_grid">
+                    <div class="single_input_card">
+                      <h3 class="card_title">Job Description</h3>
+                      <div class="card area_card border_gray">
+                        <div class="card_body">
+                          <span class="check_icon fill_by_input">
+                            <svg
+                              width="26"
+                              height="26"
+                              viewBox="0 0 26 26"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M19.0936 9.06488L11.9689 17.9732L6.37207 13.3087L7.42807 12.0415L11.7313 15.6269L17.8066 8.03528L19.0936 9.06488Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </span>
+
+                          <textarea
+                            name="job_desc"
+                            id=""
+                            cols="30"
+                            rows="10"
+                            class="card_textarea"
+                            placeholder="Enter Job Description"
+                          ></textarea>
+                        </div>
+                        <div class="card_footer">
+                          <div class="upload_icon_with_input">
+                            <label for="job_desc_file" class="btn btn_upload">
+                              <div class="cloud_icons">
+                                <img
+                                  src="assets/images/icons/material-symbols_upload.svg"
+                                  alt="Upload"
+                                />
+                              </div>
+                              <input
+                                type="file"
+                                name="job_desc_file"
+                                id="job_desc_file"
+                                hidden
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="single_input_card">
+                      <h3 class="card_title">Your Current Resume</h3>
+                      <div class="card area_card border_gray">
+                        <div class="card_body">
+                          <span class="check_icon fill_by_input">
+                            <svg
+                              width="26"
+                              height="26"
+                              viewBox="0 0 26 26"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M19.0936 9.06488L11.9689 17.9732L6.37207 13.3087L7.42807 12.0415L11.7313 15.6269L17.8066 8.03528L19.0936 9.06488Z"
+                                fill="white"
+                              />
+                            </svg>
+                          </span>
+                          <textarea
+                            name="current_reasume"
+                            id=""
+                            cols="30"
+                            rows="10"
+                            class="card_textarea"
+                            placeholder="Enter Your Current Resume"
+                          ></textarea>
+                        </div>
+
+                        <div class="card_footer">
+                          <div class="upload_icon_with_input">
+                            <label
+                              for="current_reasume_file"
+                              class="btn btn_upload"
+                            >
+                              <div class="cloud_icons">
+                                <img
+                                  src="assets/images/icons/material-symbols_upload.svg"
+                                  alt="Upload"
+                                />
+                              </div>
+
+                              <input
+                                type="file"
+                                name="current_reasume_file"
+                                id="current_reasume_file"
+                                hidden
+                              />
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- --  -->
+              </div>
+            </form>
+          </div>
+          <!--  -->
+          <!-- from output area  -->
+          <div class="from_output_area">
+            <div class="output_card_item">
+              <h3 class="card_title">
+                Tailored Resume <small>(75% Precision)</small>
+              </h3>
+              <div class="card area_card area_card border_primary">
+                <div class="card_body">
+                  <p class="p_title">Job: Accounting Officer</p>
+                  <p>
+                    Status: zsikdnv;kzsn :KJDNV;KNV XJDVNV Lm SJHdfbvijhsv
+                    ISvIkJSv LSN VISXV LSX viks SLIDvhbLJSHV LSKdlksv LSdvIJBV
+                    LSVI SLDvb ISJB v LSFN Ikb Isnf blkjlafkjb izdkfjblkj
+                    dsfkjnblkjdf kdjnb;kjndb dkfj;kjbn kdjfnb;kjndb
+                  </p>
+
+                  <p>
+                    dfhbvljhbdslfjkv Idkfjbkljndkjfb,smnd Ivnm st sn b;kzm
+                    ;xlmfb,Sfm b,fb S bm, fbb Ibmns Ifmnb SFIn bISFSLFKJbKJBSF
+                    SF:kjb ISKF Ikjzd;kjfb :SKFJd:kjsxfkjb ldkfjblkfdb zant
+                    ljzdkjfb:kjndxf kdjb:kjnd kjngb;dzkfj bin fkj;kjzafb
+                    d;lfknb;kjn;zkdjfnb zdfkjnb;kln;dkbg
+                    zdijgn;lkdnifknbm;djfn.jndfb;dkjb;dfb
+                  </p>
+                </div>
+                <div class="card_footer">
+                  <button type="button" class="btn btn_download">
+                    <div class="cloud_icons">
+                      <img
+                        src="assets/images/icons/basil_download-outline.svg"
+                        alt="Download"
+                      />
+                    </div>
+                  </button>
+
+                  <div class="card_right_arrow">
+                    <button type="button" class="btn btn_arrow">
+                      <div class="cloud_icons">
+                        <img
+                          src="assets/images/icons/iconamoon_arrow-left.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </button>
+                    <button type="button" class="btn btn_arrow">
+                      <div class="cloud_icons">
+                        <img
+                          src="assets/images/icons/iconamoon_arrow-right.svg"
+                          alt="arrow"
+                        />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- --  -->
+        </div>
+        <!-- from_input_area  -->
+      </div>
+    </main>
+    <!-- end: main area -->
+    <div class="container">
+      <button
+        class="openModal button button_primary"
+        data-target-modal="modal1"
+        style="
+          max-width: 300px;
+          margin: 0 auto;
+          padding: 15px;
+          margin-bottom: 15px;
+          margin-left: 10px;
+          text-align: center;
+        "
+      >
+        Open Verification Modal
+      </button>
+    </div>
+
+    <!-- ST: Verification Modal -->
+    <div class="custom_modal verification_modal" id="modal1">
+      <div class="modal_wrapper modal_small">
+        <div class="modal_content">
+          <div class="modal_card">
+            <div class="modal_body">
+              <div class="modal_icon">
+                <img src="assets/images/icons/bxs_error.svg" alt="error" />
+              </div>
+              <p>
+                Please, Properly input details to correctly tailor your resume
+              </p>
+            </div>
+            <div class="modal_footer">
+              <button
+                type="button"
+                class="modal_button button button_primary closeModal"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end: Verification Modal -->
+
+    <!-- st: footer area  -->
+    <!-- end: footer area -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
