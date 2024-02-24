@@ -50,6 +50,7 @@ $(document).ready(function() {
       $("#" + targetModal).fadeIn();
       $("#" + targetModal).addClass('show_modal');
       $("body").css("overflow", "hidden");
+      return false;
     });
   
     // Close modal when clicking the Ok button

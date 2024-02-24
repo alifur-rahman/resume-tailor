@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>General landing page | Resume Rizz</title>
     <link rel="icon" type="image/png" href="assets/images/fav.png" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,43 +23,121 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
     <!-- custom css -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
     <!-- st: header area  -->
-    <header>
+    <header class="landing_header al_header_shadow">
       <div class="container">
-        <div class="header_wrapper">
+        <div class="headerWrapper">
           <!-- logo  -->
           <div class="logo_area">
-            <a href="index.html">
-              <img
-                class="for_large_screen"
-                src="assets/images/logo.png"
-                alt="logo"
-              />
-              <img
-                class="for_extra_small_screen"
-                src="assets/images/fav.png"
-                alt="logo"
-              />
+            <a href="index.html" class="logo">
+              <img class="" src="assets/images/logo.png" alt="logo" />
             </a>
           </div>
-
           <!-- header navs  -->
-          <div class="header_naves main_navs">
-            <ul>
+          <div class="headerNav">
+            <ul class="mainNav">
               <li>
-                <a href="login.html">Log In</a>
+                <a href="index.html"
+                  >Home
+                  <img src="assets/images/icons/bxs_down-arrow.svg" alt="arrow"
+                /></a>
               </li>
               <li>
-                <a class="button button_secondary" href="signup.html"
-                  >Join Resume Rizz</a
-                >
+                <a href="about.html"
+                  >About Us
+                  <img src="assets/images/icons/bxs_down-arrow.svg" alt="arrow"
+                /></a>
+              </li>
+              <li>
+                <a href="pricing.html"
+                  >Pricing
+                  <img src="assets/images/icons/bxs_down-arrow.svg" alt="arrow"
+                /></a>
               </li>
             </ul>
+            <div class="headerBtn">
+              <ul>
+                <li class="menuItem">
+                  <a class="openModal" href="#" data-target-modal="signin_modal"
+                    >Login
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="btn btn-secondary openModal"
+                    data-target-modal="signup_modal"
+                    href="#"
+                  >
+                    Join Resume Rizz
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- mobile Menu   -->
+          <div class="mobile_bar global_mobile_menu">
+            <div class="drop_down_item">
+              <a class="bar_icons" href="#">
+                <img
+                  src="assets/images/icons/fontisto_nav-icon-list-a.svg"
+                  alt="bars"
+                />
+              </a>
+              <div class="drop_down_navs">
+                <ul>
+                  <li class="close_dropdown">
+                    <button class="close_dropdown_btn">
+                      <img
+                        src="assets/images/icons/iconoir_cancel.svg"
+                        alt="close"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <a class="" href="index.html"> <p>Home</p></a>
+                  </li>
+                  <li>
+                    <a class="" href="about.html"> <p>About Us</p></a>
+                  </li>
+                  <li>
+                    <a class="" href="pricing.html"> <p>Pricing</p></a>
+                  </li>
+                  <li>
+                    <a
+                      class="openModal"
+                      href="#"
+                      data-target-modal="signin_modal"
+                    >
+                      <p>Log In</p></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="active_btn openModal"
+                      data-target-modal="signup_modal"
+                      href="#"
+                    >
+                      <p>Join Resume Rizz</p></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- End mobile menu  -->
           </div>
         </div>
       </div>
@@ -61,21 +145,620 @@
     <!-- end: header area  -->
     <!-- st: main area  -->
     <main>
-      <img
-        style="width: 100%; margin-top: -150px; position: relative; z-index: -1"
-        src="assets/images/General-landing-page.svg"
-        alt="demo image"
-      />
+      <!-- st: Hero Area -->
+      <section class="heroArea">
+        <div class="container">
+          <div class="hero__wrapper">
+            <div class="heroHeader">
+              <h2 class="section__ttitle">
+                Welcome to Resume <span>Rizz</span> -
+              </h2>
+              <h3 class="subTitle">
+                Your Gateway to a Brighter <br />
+                Career Path
+              </h3>
+              <p>
+                In today's competitive job market, standing out is more crucial
+                than ever, But how do you ensure your resume lands on top of the
+                pile? That's where we come in. Resume Rizz leverages cutting
+                edge AI to revolutionize your Job application process, turning
+                the daunting task of resume customization into a swift, stress
+                free experience.
+              </p>
+              <a href="tailoring.html" class="btn btn-primary">Create CV</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__content">
+          <img
+            src="assets/images/background/mobile-banner.png"
+            alt="hero-banner"
+          />
+        </div>
+      </section>
+      <!-- End: Hero Area -->
+      <!-- st: Vide Area -->
+      <section class="videArea">
+        <div class="container">
+          <div class="vedioHeader">
+            <h3 class="section__ttitle">
+              Discover the Future of Job Applications -
+            </h3>
+            <h4 class="subTitle">Watch Our Video</h4>
+            <p>
+              Dive into our short Explainer Video and see first hand how Resume
+              Rizz can transform your job search from overwhelming to
+              effortless. Learn how our innovative platform crafts tailor-made
+              resumes that not only match your skills and experience with your
+              dream job but also captivates the attention of your future
+              employers
+            </p>
+          </div>
+          <div class="vedio__content">
+            <div class="vedioSlider">
+              <div class="singleSlide">
+                <img
+                  src="assets/images/background/video-thum.png"
+                  alt="slide"
+                />
+
+                <!-- <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/BB49x_uMlGA?si=BorArkkQZGN3f_2g"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Vide Area -->
+      <!-- st: Resume Area -->
+      <section class="resumeArea">
+        <div class="container">
+          <div class="resumeHeader">
+            <h2 class="section__ttitle">
+              Why Choose Resume <span>Rizz</span> ?
+            </h2>
+          </div>
+          <div class="resume__content resume_slider owl-carousel owl-themes">
+            <div class="resumeCard">
+              <div class="resumeCard_thumb">
+                <!-- <img src="assets/images/resume/icon-1.svg" alt="icon" />-->
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M40.2169 23.9882C40.2169 27.8026 39.0859 31.5312 36.9667 34.7028C34.8476 37.8743 31.8356 40.3462 28.3116 41.8059C24.7876 43.2656 20.9098 43.6475 17.1688 42.9033C13.4277 42.1592 9.99133 40.3224 7.29417 37.6253C4.59702 34.9281 2.76023 31.4917 2.01609 27.7507C1.27194 24.0096 1.65386 20.1319 3.11355 16.6079C4.57324 13.0839 7.04514 10.0719 10.2167 7.95271C13.3882 5.83357 17.1169 4.70248 20.9312 4.70248M1.64552 23.9882H23.898"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20.9313 4.70248C16.4754 10.1814 13.8773 16.9355 13.5127 23.9882C13.8773 31.0409 16.4754 37.795 20.9313 43.2739C24.424 38.9787 26.7904 33.8802 27.8163 28.44"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.7988 12.7607C22.6738 12.5678 22.6738 10.9478 23.7988 10.7518C25.797 10.4047 27.6466 9.47026 29.1115 8.0677C30.5765 6.66513 31.5905 4.85799 32.0242 2.87677L32.0885 2.56499C32.336 1.44963 33.9206 1.43999 34.1778 2.55534L34.2581 2.91856C34.7085 4.89081 35.7317 6.68598 37.1991 8.07852C38.6666 9.47106 40.5128 10.3989 42.506 10.7453C43.6374 10.9414 43.6374 12.5711 42.506 12.7703C40.5128 13.1168 38.6666 14.0446 37.1991 15.4372C35.7317 16.8297 34.7085 18.6249 34.2581 20.5971L34.1778 20.9571C33.9206 22.0693 32.336 22.0628 32.0885 20.9475L32.0242 20.6389C31.5905 18.6577 30.5765 16.8506 29.1115 15.448C27.6466 14.0454 25.797 13.1078 23.7988 12.7607Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="resumeCard_text">
+                <h3>AI Powered Customization</h3>
+                <p>
+                  Instantly generate resumes that speak the language of your
+                  desired jobs.
+                </p>
+              </div>
+            </div>
+            <div class="resumeCard">
+              <div class="resumeCard_thumb">
+                <!-- <img src="assets/images/resume/icon-2.svg" alt="icon" /> -->
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.52354 9.50438C16.6392 2.39813 28.2079 2.47313 35.3667 9.63376C42.5292 16.7963 42.6042 28.3706 35.4867 35.4863C28.371 42.6019 16.7967 42.5288 9.63417 35.3663C7.61948 33.3599 6.09726 30.9138 5.187 28.2201C4.27674 25.5265 4.00322 22.6584 4.38792 19.8413C4.43839 19.4715 4.63367 19.137 4.9308 18.9112C5.22793 18.6855 5.60257 18.587 5.97229 18.6375C6.34202 18.688 6.67656 18.8833 6.9023 19.1804C7.12805 19.4775 7.22652 19.8522 7.17604 20.2219C6.84949 22.6093 7.081 25.04 7.85237 27.3229C8.62374 29.6058 9.91396 31.6787 11.6217 33.3788C17.706 39.4613 27.4992 39.4969 33.4992 33.4988C39.4973 27.4988 39.4617 17.7056 33.3792 11.6213C27.2985 5.54251 17.511 5.50313 11.511 11.4938L12.9135 11.4994C13.0982 11.5002 13.2809 11.5375 13.4512 11.6089C13.6215 11.6804 13.776 11.7847 13.906 11.9159C14.036 12.0471 14.1388 12.2026 14.2087 12.3735C14.2786 12.5445 14.3141 12.7275 14.3132 12.9122C14.3124 13.0969 14.2751 13.2796 14.2037 13.4498C14.1322 13.6201 14.0279 13.7747 13.8967 13.9046C13.7655 14.0346 13.61 14.1375 13.4391 14.2074C13.2681 14.2772 13.0851 14.3127 12.9004 14.3119L8.12667 14.2894C7.75598 14.2874 7.40107 14.1392 7.13912 13.8769C6.87718 13.6146 6.7294 13.2594 6.72792 12.8888L6.70354 8.11876C6.70256 7.93409 6.73796 7.75103 6.80772 7.58004C6.87748 7.40905 6.98024 7.25347 7.11012 7.12219C7.24001 6.99092 7.39448 6.8865 7.56472 6.81492C7.73495 6.74334 7.91762 6.70599 8.10229 6.70501C8.28697 6.70402 8.47002 6.73942 8.64101 6.80918C8.812 6.87894 8.96758 6.9817 9.09886 7.11159C9.23014 7.24147 9.33455 7.39594 9.40613 7.56618C9.47771 7.73642 9.51506 7.91909 9.51604 8.10376L9.52354 9.50438ZM22.4985 13.5919C22.8715 13.5919 23.2292 13.74 23.4929 14.0038C23.7566 14.2675 23.9048 14.6252 23.9048 14.9981V21.9169L28.1817 26.1919C28.316 26.3215 28.4232 26.4767 28.497 26.6482C28.5708 26.8197 28.6097 27.0042 28.6114 27.191C28.6131 27.3777 28.5776 27.5629 28.507 27.7357C28.4364 27.9086 28.332 28.0656 28.2 28.1977C28.0681 28.3298 27.9111 28.4343 27.7383 28.5051C27.5655 28.5759 27.3804 28.6116 27.1936 28.61C27.0069 28.6085 26.8224 28.5698 26.6508 28.4962C26.4792 28.4226 26.324 28.3155 26.1942 28.1813L21.0942 23.0813V15C21.0942 14.627 21.2423 14.2694 21.506 14.0056C21.7698 13.7419 22.1275 13.5938 22.5004 13.5938"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="resumeCard_text">
+                <h3>Saves Time</h3>
+                <p>
+                  Say goodbye to hours of editing. Create impactful applications
+                  in minutes.
+                </p>
+              </div>
+            </div>
+            <div class="resumeCard">
+              <div class="resumeCard_thumb">
+                <!-- <img src="assets/images/resume/icon-3.svg" alt="icon" /> -->
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M37.9688 9.84375H30.9375V8.4375C30.9375 7.31862 30.493 6.24556 29.7019 5.45439C28.9107 4.66322 27.8376 4.21875 26.7188 4.21875H18.2812C17.1624 4.21875 16.0893 4.66322 15.2981 5.45439C14.507 6.24556 14.0625 7.31862 14.0625 8.4375V9.84375H7.03125C6.28533 9.84375 5.56996 10.1401 5.04251 10.6675C4.51507 11.195 4.21875 11.9103 4.21875 12.6562V35.1562C4.21875 35.9022 4.51507 36.6175 5.04251 37.145C5.56996 37.6724 6.28533 37.9688 7.03125 37.9688H37.9688C38.7147 37.9688 39.43 37.6724 39.9575 37.145C40.4849 36.6175 40.7812 35.9022 40.7812 35.1562V12.6562C40.7812 11.9103 40.4849 11.195 39.9575 10.6675C39.43 10.1401 38.7147 9.84375 37.9688 9.84375ZM16.875 8.4375C16.875 8.06454 17.0232 7.70685 17.2869 7.44313C17.5506 7.17941 17.9083 7.03125 18.2812 7.03125H26.7188C27.0917 7.03125 27.4494 7.17941 27.7131 7.44313C27.9768 7.70685 28.125 8.06454 28.125 8.4375V9.84375H16.875V8.4375ZM37.9688 12.6562V19.9705C33.2223 22.5541 27.9041 23.9072 22.5 23.9062C17.0961 23.9072 11.7781 22.5548 7.03125 19.9723V12.6562H37.9688ZM37.9688 35.1562H7.03125V23.1398C11.8475 25.4957 17.1384 26.7198 22.5 26.7188C27.8617 26.7189 33.1525 25.4942 37.9688 23.1381V35.1562ZM18.2812 19.6875C18.2812 19.3145 18.4294 18.9569 18.6931 18.6931C18.9569 18.4294 19.3145 18.2812 19.6875 18.2812H25.3125C25.6855 18.2812 26.0431 18.4294 26.3069 18.6931C26.5706 18.9569 26.7188 19.3145 26.7188 19.6875C26.7188 20.0605 26.5706 20.4181 26.3069 20.6819C26.0431 20.9456 25.6855 21.0938 25.3125 21.0938H19.6875C19.3145 21.0938 18.9569 20.9456 18.6931 20.6819C18.4294 20.4181 18.2812 20.0605 18.2812 19.6875Z"
+                    fill="#fff"
+                  />
+                </svg>
+              </div>
+              <div class="resumeCard_text">
+                <h3>Increase Your Chances</h3>
+                <p>
+                  Stand out with a resume that's designed for distinction. Your
+                  next opportunity is closer than you think. Let Resume Rizz
+                  guide you there.
+                </p>
+              </div>
+            </div>
+            <div class="resumeCard">
+              <div class="resumeCard_thumb">
+                <!-- <img src="assets/images/resume/icon-1.svg" alt="icon" />-->
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M40.2169 23.9882C40.2169 27.8026 39.0859 31.5312 36.9667 34.7028C34.8476 37.8743 31.8356 40.3462 28.3116 41.8059C24.7876 43.2656 20.9098 43.6475 17.1688 42.9033C13.4277 42.1592 9.99133 40.3224 7.29417 37.6253C4.59702 34.9281 2.76023 31.4917 2.01609 27.7507C1.27194 24.0096 1.65386 20.1319 3.11355 16.6079C4.57324 13.0839 7.04514 10.0719 10.2167 7.95271C13.3882 5.83357 17.1169 4.70248 20.9312 4.70248M1.64552 23.9882H23.898"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M20.9313 4.70248C16.4754 10.1814 13.8773 16.9355 13.5127 23.9882C13.8773 31.0409 16.4754 37.795 20.9313 43.2739C24.424 38.9787 26.7904 33.8802 27.8163 28.44"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M23.7988 12.7607C22.6738 12.5678 22.6738 10.9478 23.7988 10.7518C25.797 10.4047 27.6466 9.47026 29.1115 8.0677C30.5765 6.66513 31.5905 4.85799 32.0242 2.87677L32.0885 2.56499C32.336 1.44963 33.9206 1.43999 34.1778 2.55534L34.2581 2.91856C34.7085 4.89081 35.7317 6.68598 37.1991 8.07852C38.6666 9.47106 40.5128 10.3989 42.506 10.7453C43.6374 10.9414 43.6374 12.5711 42.506 12.7703C40.5128 13.1168 38.6666 14.0446 37.1991 15.4372C35.7317 16.8297 34.7085 18.6249 34.2581 20.5971L34.1778 20.9571C33.9206 22.0693 32.336 22.0628 32.0885 20.9475L32.0242 20.6389C31.5905 18.6577 30.5765 16.8506 29.1115 15.448C27.6466 14.0454 25.797 13.1078 23.7988 12.7607Z"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div class="resumeCard_text">
+                <h3>AI Powered Customization</h3>
+                <p>
+                  Instantly generate resumes that speak the language of your
+                  desired jobs.
+                </p>
+              </div>
+            </div>
+            <div class="resumeCard">
+              <div class="resumeCard_thumb">
+                <!-- <img src="assets/images/resume/icon-2.svg" alt="icon" /> -->
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.52354 9.50438C16.6392 2.39813 28.2079 2.47313 35.3667 9.63376C42.5292 16.7963 42.6042 28.3706 35.4867 35.4863C28.371 42.6019 16.7967 42.5288 9.63417 35.3663C7.61948 33.3599 6.09726 30.9138 5.187 28.2201C4.27674 25.5265 4.00322 22.6584 4.38792 19.8413C4.43839 19.4715 4.63367 19.137 4.9308 18.9112C5.22793 18.6855 5.60257 18.587 5.97229 18.6375C6.34202 18.688 6.67656 18.8833 6.9023 19.1804C7.12805 19.4775 7.22652 19.8522 7.17604 20.2219C6.84949 22.6093 7.081 25.04 7.85237 27.3229C8.62374 29.6058 9.91396 31.6787 11.6217 33.3788C17.706 39.4613 27.4992 39.4969 33.4992 33.4988C39.4973 27.4988 39.4617 17.7056 33.3792 11.6213C27.2985 5.54251 17.511 5.50313 11.511 11.4938L12.9135 11.4994C13.0982 11.5002 13.2809 11.5375 13.4512 11.6089C13.6215 11.6804 13.776 11.7847 13.906 11.9159C14.036 12.0471 14.1388 12.2026 14.2087 12.3735C14.2786 12.5445 14.3141 12.7275 14.3132 12.9122C14.3124 13.0969 14.2751 13.2796 14.2037 13.4498C14.1322 13.6201 14.0279 13.7747 13.8967 13.9046C13.7655 14.0346 13.61 14.1375 13.4391 14.2074C13.2681 14.2772 13.0851 14.3127 12.9004 14.3119L8.12667 14.2894C7.75598 14.2874 7.40107 14.1392 7.13912 13.8769C6.87718 13.6146 6.7294 13.2594 6.72792 12.8888L6.70354 8.11876C6.70256 7.93409 6.73796 7.75103 6.80772 7.58004C6.87748 7.40905 6.98024 7.25347 7.11012 7.12219C7.24001 6.99092 7.39448 6.8865 7.56472 6.81492C7.73495 6.74334 7.91762 6.70599 8.10229 6.70501C8.28697 6.70402 8.47002 6.73942 8.64101 6.80918C8.812 6.87894 8.96758 6.9817 9.09886 7.11159C9.23014 7.24147 9.33455 7.39594 9.40613 7.56618C9.47771 7.73642 9.51506 7.91909 9.51604 8.10376L9.52354 9.50438ZM22.4985 13.5919C22.8715 13.5919 23.2292 13.74 23.4929 14.0038C23.7566 14.2675 23.9048 14.6252 23.9048 14.9981V21.9169L28.1817 26.1919C28.316 26.3215 28.4232 26.4767 28.497 26.6482C28.5708 26.8197 28.6097 27.0042 28.6114 27.191C28.6131 27.3777 28.5776 27.5629 28.507 27.7357C28.4364 27.9086 28.332 28.0656 28.2 28.1977C28.0681 28.3298 27.9111 28.4343 27.7383 28.5051C27.5655 28.5759 27.3804 28.6116 27.1936 28.61C27.0069 28.6085 26.8224 28.5698 26.6508 28.4962C26.4792 28.4226 26.324 28.3155 26.1942 28.1813L21.0942 23.0813V15C21.0942 14.627 21.2423 14.2694 21.506 14.0056C21.7698 13.7419 22.1275 13.5938 22.5004 13.5938"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="resumeCard_text">
+                <h3>Saves Time</h3>
+                <p>
+                  Say goodbye to hours of editing. Create impactful applications
+                  in minutes.
+                </p>
+              </div>
+            </div>
+            <div class="resumeCard">
+              <div class="resumeCard_thumb">
+                <!-- <img src="assets/images/resume/icon-3.svg" alt="icon" /> -->
+                <svg
+                  width="45"
+                  height="45"
+                  viewBox="0 0 45 45"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M37.9688 9.84375H30.9375V8.4375C30.9375 7.31862 30.493 6.24556 29.7019 5.45439C28.9107 4.66322 27.8376 4.21875 26.7188 4.21875H18.2812C17.1624 4.21875 16.0893 4.66322 15.2981 5.45439C14.507 6.24556 14.0625 7.31862 14.0625 8.4375V9.84375H7.03125C6.28533 9.84375 5.56996 10.1401 5.04251 10.6675C4.51507 11.195 4.21875 11.9103 4.21875 12.6562V35.1562C4.21875 35.9022 4.51507 36.6175 5.04251 37.145C5.56996 37.6724 6.28533 37.9688 7.03125 37.9688H37.9688C38.7147 37.9688 39.43 37.6724 39.9575 37.145C40.4849 36.6175 40.7812 35.9022 40.7812 35.1562V12.6562C40.7812 11.9103 40.4849 11.195 39.9575 10.6675C39.43 10.1401 38.7147 9.84375 37.9688 9.84375ZM16.875 8.4375C16.875 8.06454 17.0232 7.70685 17.2869 7.44313C17.5506 7.17941 17.9083 7.03125 18.2812 7.03125H26.7188C27.0917 7.03125 27.4494 7.17941 27.7131 7.44313C27.9768 7.70685 28.125 8.06454 28.125 8.4375V9.84375H16.875V8.4375ZM37.9688 12.6562V19.9705C33.2223 22.5541 27.9041 23.9072 22.5 23.9062C17.0961 23.9072 11.7781 22.5548 7.03125 19.9723V12.6562H37.9688ZM37.9688 35.1562H7.03125V23.1398C11.8475 25.4957 17.1384 26.7198 22.5 26.7188C27.8617 26.7189 33.1525 25.4942 37.9688 23.1381V35.1562ZM18.2812 19.6875C18.2812 19.3145 18.4294 18.9569 18.6931 18.6931C18.9569 18.4294 19.3145 18.2812 19.6875 18.2812H25.3125C25.6855 18.2812 26.0431 18.4294 26.3069 18.6931C26.5706 18.9569 26.7188 19.3145 26.7188 19.6875C26.7188 20.0605 26.5706 20.4181 26.3069 20.6819C26.0431 20.9456 25.6855 21.0938 25.3125 21.0938H19.6875C19.3145 21.0938 18.9569 20.9456 18.6931 20.6819C18.4294 20.4181 18.2812 20.0605 18.2812 19.6875Z"
+                    fill="#fff"
+                  />
+                </svg>
+              </div>
+              <div class="resumeCard_text">
+                <h3>Increase Your Chances</h3>
+                <p>
+                  Stand out with a resume that's designed for distinction. Your
+                  next opportunity is closer than you think. Let Resume Rizz
+                  guide you there.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Resume Area -->
+      <!-- st: CTA Area -->
+      <section class="ctaArea">
+        <div class="container">
+          <div class="ctaArea">
+            <div class="ctaHeader">
+              <h2 class="section__ttitle">Companies Hiring Through Us</h2>
+              <p>
+                These companies get the best employees through our
+                recommendations.
+              </p>
+            </div>
+            <div class="cta__content">
+              <div class="ctaSlide owl-carousel owl-themes">
+                <div class="singleSlide">
+                  <img src="assets/images/trust/fireswitch.png" alt="icon" />
+                </div>
+                <div class="singleSlide">
+                  <img src="assets/images/trust/renitrust.png" alt="icon" />
+                </div>
+                <div class="singleSlide">
+                  <img
+                    src="assets/images/trust/images-removebg-preview.png"
+                    alt="icon"
+                  />
+                </div>
+                <div class="singleSlide">
+                  <img
+                    src="assets/images/trust/images-removebg-preview.png"
+                    alt="icon"
+                  />
+                </div>
+                <div class="singleSlide">
+                  <img src="assets/images/icons/bxs_error.svg" alt="icon" />
+                </div>
+                <div class="singleSlide">
+                  <img src="assets/images/icons/bxs_error.svg" alt="icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: CTA Area -->
     </main>
 
+    <!-- ST: Sigin Modal -->
+    <div class="custom_modal auth_modal_style" id="signin_modal">
+      <div class="modal_wrapper modal_midium">
+        <div class="modal_content">
+          <div class="modal_card">
+            <div class="modal_body">
+              <div class="authContent">
+                <!-- Header -->
+                <div class="auth__header">
+                  <a href="index.html" class="auth_logo">
+                    <img src="assets/images/logo.png" alt="logo" />
+                  </a>
+                  <div class="auth__status">
+                    <h3 class="authTitle">Hi there 👋</h3>
+                    <p class="authSubTitle">
+                      Welcome back, login to your account
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Socail Login  -->
+                <div class="authBottomHeader">
+                  <ul class="authSocailLIst">
+                    <li>
+                      <button type="button" class="socailAuth">
+                        <img
+                          src="assets/images/icons/flat-color-icons_google.svg"
+                          alt="google"
+                        />
+                        <small>Sign up with Google</small>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="socailAuth">
+                        <img
+                          src="assets/images/icons/logos_facebook.svg"
+                          alt="facebook"
+                        />
+                        <small>Sign up with Facebook</small>
+                      </button>
+                    </li>
+                  </ul>
+                  <span class="breakOr">or</span>
+                </div>
+
+                <!-- Login Form -->
+                <form action="#" class="authForm">
+                  <div class="formControl">
+                    <input type="email" placeholder="Enter your email" />
+                    <label for="#">Email Address</label>
+                  </div>
+                  <div class="formControl authHidePass">
+                    <input
+                      type="password"
+                      id="passwordInput"
+                      placeholder="Enter your password"
+                    />
+                    <label for="#">
+                      Password
+                      <span>
+                        <img src="assets/images/icons/lock.svg" alt="" />
+                      </span>
+                    </label>
+                    <button
+                      type="button"
+                      class="togglePassChecker"
+                      onclick="togglePassword()"
+                    >
+                      <img
+                        id="toggleIcon"
+                        src="assets/images/icons/eye-off.svg"
+                        alt="icon"
+                      />
+                    </button>
+                  </div>
+                  <a href="#" class="forgotPass">Forgot Password?</a>
+                  <div class="formSubmit">
+                    <button type="submit" class="formSubmitBtn">Log In</button>
+                  </div>
+                </form>
+
+                <!-- Form Footer  -->
+                <div class="authWithOthers">
+                  <p>
+                    Don't have an account? <a href="signup.html">Sign up</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ST: Sigup Modal -->
+    <div class="custom_modal auth_modal_style" id="signup_modal">
+      <div class="modal_wrapper modal_midium">
+        <div class="modal_content">
+          <div class="modal_card">
+            <div class="modal_body">
+              <div class="authContent">
+                <!-- Header -->
+                <div class="auth__header">
+                  <a href="index.html" class="auth_logo">
+                    <img src="assets/images/logo.png" alt="logo" />
+                  </a>
+                  <div class="auth__status">
+                    <h3 class="authTitle">Get Started</h3>
+                    <p class="authSubTitle">Apply In 2 Minutes</p>
+                  </div>
+                </div>
+
+                <!-- Socail Login  -->
+                <div class="authBottomHeader">
+                  <ul class="authSocailLIst">
+                    <li>
+                      <button type="button" class="socailAuth">
+                        <img
+                          src="assets/images/icons/flat-color-icons_google.svg"
+                          alt="google"
+                        />
+                        <small>Sign up with Google</small>
+                      </button>
+                    </li>
+                    <li>
+                      <button type="button" class="socailAuth">
+                        <img
+                          src="assets/images/icons/logos_facebook.svg"
+                          alt="facebook"
+                        />
+                        <small>Sign up with Facebook</small>
+                      </button>
+                    </li>
+                  </ul>
+                  <span class="breakOr">or</span>
+                </div>
+
+                <!-- Login Form -->
+                <form action="#" class="authForm">
+                  <div class="formControl">
+                    <input type="text" placeholder="Enter your username" />
+                    <label for="#">Username</label>
+                  </div>
+                  <div class="formControl">
+                    <input type="email" placeholder="Enter your email" />
+                    <label for="#">Email Address</label>
+                  </div>
+                  <div class="formControl authHidePass">
+                    <input
+                      type="password"
+                      id="passwordInput"
+                      placeholder="Enter your password"
+                    />
+                    <label for="#">
+                      Password
+                      <span>
+                        <img src="assets/images/icons/lock.svg" alt="" />
+                      </span>
+                    </label>
+                    <button
+                      type="button"
+                      class="togglePassChecker"
+                      onclick="togglePassword()"
+                    >
+                      <img
+                        id="toggleIcon"
+                        src="assets/images/icons/eye-off.svg"
+                        alt="icon"
+                      />
+                    </button>
+                  </div>
+                  <p class="termConditions">
+                    By continuing, you agree to our
+                    <a href="#">Terms and Conditions</a> and
+                    <a href="#">Privacy Policy</a>.
+                  </p>
+                  <div class="formSubmit">
+                    <button type="submit" class="formSubmitBtn">
+                      Get Started
+                    </button>
+                  </div>
+                </form>
+
+                <!-- Form Footer  -->
+                <div class="authWithOthers">
+                  <p>
+                    Already have an account? <a href="login.html">Log In</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- st: footer area  -->
+    <footer class="globalFooter">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer_menu">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Companies</a></li>
+              <li><a href="#">Privacy policy & Terms</a></li>
+            </ul>
+          </div>
+          <div class="footerWidgets">
+            <div class="single__widget">
+              <a href="#" class="footerLogo">
+                <img src="assets/images/logo.png" alt="logo" />
+              </a>
+              <ul>
+                <li>Hello@reni.store</li>
+                <li>+1 803 783 7313</li>
+              </ul>
+            </div>
+            <div class="footer__widget socailWidget">
+              <h3>Follow us</h3>
+              <ul class="footerSocail">
+                <li>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_cp">
+        <p>Copyright &copy; 2024 All rights reserved.</p>
+      </div>
+    </footer>
     <!-- end: footer area -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".ctaSlide").owlCarousel({
+          loop: true,
+          dots: false,
+          nav: true,
+          margin: 10,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 3,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 4,
+            },
+          },
+        });
+        $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
+        $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+      });
+      $(document).ready(function () {
+        $(".resume_slider").owlCarousel({
+          loop: true,
+          dots: false,
+          nav: true,
+          margin: 10,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            700: {
+              items: 2,
+            },
+            1000: {
+              items: 3,
+            },
+          },
+          onInitialized: callback,
+          onTranslated: callback,
+        });
+
+        function callback(event) {
+          var $middleItem = $(event.target).find(".owl-item.active").eq(1);
+          $(event.target).find(".owl-item").removeClass("middle-active");
+          $middleItem.addClass("middle-active");
+        }
+
+        $(".owl-prev").html('<i class="fas fa-chevron-left"></i>');
+        $(".owl-next").html('<i class="fas fa-chevron-right"></i>');
+      });
+    </script>
   </body>
 </html>
