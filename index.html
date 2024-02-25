@@ -198,19 +198,21 @@
             <div class="vedioSlider">
               <div class="singleSlide">
                 <img
+                  class="vedio__thumb"
                   src="assets/images/background/video-thum.png"
                   alt="slide"
+                  onclick="playVideo()"
+                  data-embed-url="https://www.youtube.com/embed/BB49x_uMlGA?autoplay=1"
                 />
-
-                <!-- <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/BB49x_uMlGA?si=BorArkkQZGN3f_2g"
+                <iframe
+                  id="videoFrame"
+                  src="about:blank"
                   title="YouTube video player"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
-                ></iframe> -->
+                  style="display: none"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -705,60 +707,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".ctaSlide").owlCarousel({
-          loop: true,
-          dots: false,
-          nav: true,
-          margin: 10,
-          responsiveClass: true,
-          responsive: {
-            0: {
-              items: 3,
-            },
-            600: {
-              items: 3,
-            },
-            1000: {
-              items: 4,
-            },
-          },
-        });
-        $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
-        $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
-      });
-      $(document).ready(function () {
-        $(".resume_slider").owlCarousel({
-          loop: true,
-          dots: false,
-          nav: true,
-          margin: 10,
-          responsiveClass: true,
-          responsive: {
-            0: {
-              items: 1,
-            },
-            700: {
-              items: 2,
-            },
-            1000: {
-              items: 3,
-            },
-          },
-          onInitialized: callback,
-          onTranslated: callback,
-        });
-
-        function callback(event) {
-          var $middleItem = $(event.target).find(".owl-item.active").eq(1);
-          $(event.target).find(".owl-item").removeClass("middle-active");
-          $middleItem.addClass("middle-active");
-        }
-
-        $(".owl-prev").html('<i class="fas fa-chevron-left"></i>');
-        $(".owl-next").html('<i class="fas fa-chevron-right"></i>');
-      });
-    </script>
   </body>
 </html>
