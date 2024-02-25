@@ -8,7 +8,6 @@ function rangeSlide(value) {
 
 }
 
-
 $(document).on('click', '.drop_down_item', function (event) {
     // Check if the event target is .drop_down_navs
     if ($(event.target).closest('.drop_down_navs').length) {
@@ -86,3 +85,126 @@ $(document).ready(function() {
       toggleIcon.src = "assets/images/icons/eye-off.svg";
     }
   }
+
+  
+  $(document).ready(function () {
+    $(".ctaSlide").owlCarousel({
+      loop: true,
+      dots: false,
+      nav: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 3,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 4,
+        },
+      },
+    });
+    $(".owl-prev").html('<i class="fas fa-arrow-left"></i>');
+    $(".owl-next").html('<i class="fas fa-arrow-right"></i>');
+  });
+  $(document).ready(function () {
+    $(".resume_slider").owlCarousel({
+      loop: true,
+      dots: false,
+      nav: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        700: {
+          items: 2,
+        },
+        1000: {
+          items: 3,
+        },
+      },
+      onInitialized: callback,
+      onTranslated: callback,
+    });
+
+    function callback(event) {
+      var $middleItem = $(event.target).find(".owl-item.active").eq(1);
+      $(event.target).find(".owl-item").removeClass("middle-active");
+      $middleItem.addClass("middle-active");
+    }
+
+    $(".owl-prev").html('<i class="fas fa-chevron-left"></i>');
+    $(".owl-next").html('<i class="fas fa-chevron-right"></i>');
+  });
+
+  $(document).ready(function () {
+    if ($(window).width() < 768) {
+      pricing_caousel();
+    }
+
+    $(window).resize(function () {
+      if ($(window).width() < 768) {
+        pricing_caousel();
+      } else {
+        // Remove Owl Carousel classes and destroy the instance
+        $(".pricings_cards").removeClass("owl-carousel owl-theme");
+        $(".pricings_cards").trigger("destroy.owl.carousel");
+      }
+    });
+
+    function pricing_caousel() {
+      $(".pricings_cards").addClass("owl-carousel owl-themes");
+      $(".pricings_cards").owlCarousel({
+        loop: true,
+        dots: false,
+        nav: true,
+        margin: 10,
+        responsiveClass: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          700: {
+            items: 1,
+          },
+          900: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+        onInitialized: callback,
+        onTranslated: callback,
+      });
+
+      function callback(event) {
+        var $middleItem = $(event.target).find(".owl-item.active").eq(1);
+        $(event.target).find(".owl-item").removeClass("middle-active");
+        $middleItem.addClass("middle-active");
+      }
+
+      $(".owl-prev").html('<i class="fas fa-chevron-left"></i>');
+      $(".owl-next").html('<i class="fas fa-chevron-right"></i>');
+    }
+  });
+
+  function playVideo() {
+    let url = document.querySelector('.vedio__thumb').getAttribute('data-embed-url');
+    // Hide the thumbnail
+    document.querySelector('.vedio__thumb').style.display = 'none';
+    
+    // Get the iframe element
+    var iframe = document.getElementById('videoFrame');
+    
+    // Update the source of the iframe to start playing the video
+    iframe.src =  url || "";
+    
+    // Display the iframe
+    iframe.style.display = 'block';
+  }
+
